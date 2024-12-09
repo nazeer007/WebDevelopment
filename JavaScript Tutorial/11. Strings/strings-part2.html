@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <h3>Open Console</h3>
+    <p id="demo1"></p>
+    <script>
+        // JavaScript String Search
+        // JavaScript String indexOf()
+        let text1 = "Please locate where 'locate' occurs!";
+        console.log(text1.indexOf('locate'));
+
+        // JavaScript String lastIndexOf()
+        console.log(text1.lastIndexOf('locate'));
+        // Both indexOf(), and lastIndexOf() return -1 if the text is not found
+
+        console.log(text1.indexOf("locate",15));
+
+        // JavaScript String search()
+        console.log(text1.search("locate"));
+        console.log(text1.search(/locate/));
+
+        // JavaScript String match()
+        let text2 = "The rain in SPAIN stays mainly in the plain";
+        console.log(text2.match("ain"));
+        console.log(text2.match(/ain/));
+        console.log(text2.match(/ain/g)); //Perform a global search for "ain"
+        console.log(text2.match(/ain/gi)); //Perform a global, case-insensitive search for "ain"
+
+        // JavaScript String matchAll()
+        let text3 = "I love cats. Cats are very easy to love. Cats are very popular.";
+        const iterator = text3.matchAll("Cats");
+        console.log(Array.from(iterator));
+        console.log(Array.from(text3.matchAll(/Cats/g)));
+        console.log(Array.from(text3.matchAll(/Cats/gi)));
+
+        // JavaScript String includes()
+        let text4 = "Hello world, welcome to the universe.";
+        console.log(text4.includes("world"));
+        console.log(text4.includes("world",6));
+
+        // JavaScript String startsWith()
+        console.log(text4.startsWith("Hello"));
+        console.log(text4.startsWith("world",6));
+        
+        // JavaScript String endsWith()
+        console.log(text4.endsWith("universe."));
+
+        // JavaScript Template Strings
+        let text5 = `Nazeer Syed`;
+
+        // Quotes Inside Strings
+        let text6 = `He's often called "Johnny"`;
+
+        // Multiline Strings
+        let text7 =
+        `The quick
+        brown fox
+        jumps over
+        the lazy dog`;
+
+        // Interpolation
+        let firstName = "Nazeer";
+        let lastName = "Syed";
+        let text8 = `Welcome ${firstName}, ${lastName}`;
+        console.log(text8);
+
+        // Expression Substitution
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+        console.log(total);
+
+        // HTML Templates
+        let header = "Template Strings";
+        let tags = ["template strings", "javascript","es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        for(const x of tags){
+            html += `<li>${x}</li>`;
+        }
+        html += `<ul>`;
+        document.getElementById("demo1").innerHTML=html;
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+      img {
+        /* width: 100%; */ /*
+        max-width: 100%;
+        height: auto;
+      } */
+      .left {
+        background-color: powderblue;
+        padding: 10px;
+        float: left;
+        width: 20%;
+      }
+      .main {
+        background-color: tomato;
+        padding: 10px;
+        float: left;
+        width: 50%;
+      }
+      .right {
+        background-color: yellowgreen;
+        padding: 10px;
+        float: left;
+        width: 20%;
+      }
+      @media screen and (max-width: 760px) {
+        .left,
+        .main,
+        .right {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="/HTML Images/car.jpg" alt="A car" /> -->
+    <picture>
+      <source srcset="img_smallflower.jpg" media="(max-width:600px)" />
+      <source srcset="img_flowers.jpg" media="(max-width:1500px)" />
+      <source srcset="img_flowers.jpg" />
+      <img src="img_flowers.jpg" alt="Flowers" style="width: auto" />
+    </picture>
+
+    <br />
+    <div class="left"><p>Left Menu</p></div>
+    <div class="main"><p>Main Content</p></div>
+    <div class="right"><p>Right Content</p></div>
+    <br />
+  </body>
+</html>

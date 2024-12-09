@@ -1,0 +1,14 @@
+div{
+    border: 1px solid black;
+    background-color: lightblue;
+    width: 300px;
+    padding: 25px;
+    margin: auto;
+    box-sizing: border-box;
+    /*
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    */
+}

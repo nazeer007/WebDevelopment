@@ -1,0 +1,23 @@
+h1{
+    background-color: green;
+
+}
+div{
+    background-color: lightblue;
+}
+p{
+    background-color: yellow;
+    opacity: 0.5;
+}
+/*
+body{
+    background-image: url('car.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+}
+*/
+/* Shorthand property */
+body{
+    background: #fff url('car.jpg') no-repeat right top;
+}

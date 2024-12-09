@@ -1,0 +1,17 @@
+.all-browsers{
+    background-color: #ccc;
+    padding: 20px;
+}
+.browser{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+aside{
+    width: 30%;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-style: italic;
+    background-color: #ccc;
+    float: right;
+}

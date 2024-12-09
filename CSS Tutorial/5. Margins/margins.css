@@ -1,0 +1,11 @@
+div {
+    border: 1px solid black;
+    /* margin: 120px 150px 100px 80px; */
+    width: 300px;
+    margin: auto;
+    background-color: lightblue;
+}
+p{
+    border: 1px solid red;
+    margin: inherit;
+}

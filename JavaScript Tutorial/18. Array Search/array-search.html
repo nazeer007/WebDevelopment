@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Search</title>
+</head>
+<body>
+    <h2>Array Search</h2>
+    <script>
+        // JavaScript Array indexOf()
+        const fruits = ["Apple", "Orange", "Apple", "Mango"];
+        let position = fruits.indexOf("Apple") + 1;
+        console.log(position);
+
+        // JavaScript Array lastIndexOf()
+        console.log(fruits.lastIndexOf("Apple")+1);
+
+        // JavaScript Array includes()
+        fruits.includes("Mango");
+        console.log(fruits);
+
+        // JavaScript Array find()
+        const numbers = [4, 9, 16, 25, 29];
+        let first = numbers.find(myFunction);
+        function myFunction(value, index, array){
+            return value > 18;
+        }
+        console.log(first);
+
+        // JavaScript Array findIndex()
+        let first2 = numbers.findIndex(myFunction2);
+        function myFunction2(value, index, array){
+            return value > 18;
+        }
+        console.log(first2);
+
+        // JavaScript Array findLast() Method
+        let high = numbers.findLast(x => x > 20);
+        console.log(high);
+
+        // JavaScript Array findLastIndex() Method
+        let pos = numbers.findLastIndex(x => x > 20);
+        console.log(pos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        const person = {
+            firstName : "Nazeer",
+            lastName : "Syed",
+            age : 20,
+            eyeColor: "black",
+            fullName : function(){
+                return (this.firstName + " " + this.lastName).toUpperCase();
+            }
+        };
+        document.getElementById('demo1').innerHTML=person.firstName+" is "+person.age + " years old.";
+        document.getElementById('demo2').innerHTML=person.fullName();
+
+        // Accessing JavaScript Properties
+        let age = person.age;
+        // let age = person["age"];
+        // let age = person[x];
+        console.log(age);
+
+        // Adding new Properties
+        person.nationality="Indian";
+        console.log(person.nationality);
+
+        // Deleting Properties
+        delete person.age;
+        console.log(person.age);
+
+        // Nested Objects
+        myObj = {
+            name:"John",
+            age:30,
+            myCars: {
+                car1:"Ford",
+                car2:"BMW",
+                car3:"Fiat"
+            }
+        }
+        console.log(myObj.myCars.car1);
+
+        // JavaScript Object Methods
+        name = person.fullName();
+        console.log("Full Name: "+name);
+
+        // Displaying Object Properties
+        person.city = "Tenali";
+        document.getElementById('demo3').innerHTML = 
+        person.fullName() + ", "+ person.eyeColor + ", " + person.city;
+
+        // Displaying Properties in a Loop
+        const bike = {
+            bike1: "bullet",
+            bike2: "RX100",
+            bike3: "Yamaha"
+        }
+        let text = "";
+        for (let x in bike){
+            text += bike[x] + " ";
+        };
+        document.getElementById('demo4').innerHTML = text;
+
+        // Using Object.values()
+        const employee = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        const myArray = Object.values(employee);
+        document.getElementById('demo5').innerHTML = myArray;
+
+    // Using Object.entries()
+    const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+    let newText = "";
+    for (let [fruit, value] of Object.entries(fruits)) {
+    newText += fruit + ": " + value + "<br>";
+    }
+    document.getElementById("demo6").innerHTML = newText;
+
+    // Using JSON.stringify()
+    let myString = JSON.stringify(person);
+    document.getElementById("demo7").innerHTML = myString;
+
+    // JavaScript Object Constructors
+    function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    const myFather = new Person("John", "Doe", 50, "blue");
+    Person.prototype.nationality = "English";
+    console.log("The nationality of my Father is "+myFather.nationality);
+    </script>
+</body>
+</html>

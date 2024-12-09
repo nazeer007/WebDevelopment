@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS HTML DOM</title>
+  </head>
+  <style>
+    #container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: yellow;
+    }
+    #animate {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background: red;
+    }
+  </style>
+  <body>
+    <form id="frm1" action="">
+      <label for="firstName">First Name:</label>
+      <input type="text" name="firstName" id="firstName" value="Nazeer" /><br />
+      <label for="lastName">Last Name:</label>
+      <input type="text" name="lastName" id="lastName" value="Syed" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+
+    <p id="demo"></p>
+    <p id="p2">Hello World!</p>
+    <button
+      type="button"
+      onclick=" document.getElementById('p2').style.color = 'red'"
+    >
+      CLick Me!
+    </button>
+
+    <script>
+      const x = document.forms["frm1"];
+      let text = "";
+      for (let i = 0; i < x.length; i++) {
+        text += x.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+    <h2>My First JavaScript Animation</h2>
+
+    <p><button onclick="myMove()">Click Me!</button></p>
+    <div id="container">
+      <div id="animate"></div>
+    </div>
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 10);
+            function frame() {
+                if(pos == 350) {
+                    clearInterval(id);
+                }
+                else{
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Const</title>
+</head>
+<body>
+    <script>
+        // JavaScript Array Const
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // Elements Can be Reassigned
+        cars[0] = "Toyota";
+        cars.push("Audi");
+        console.log(cars);
+        // Assigned when Declared
+        // An array declared with const must be initialized when it is declared
+
+        // Const Block Scope
+        {
+        const cars = ["Toyota", "Volvo", "BMW"];
+        // Here cars[0] is "Toyota"
+        }
+
+        // Redeclaring Arrays
+        // Redeclaring an array declared with var is allowed anywhere in a program
+        // Redeclaring or reassigning an array to const, in the same scope, or in the same block, is not allowed
+    </script>
+</body>
+</html>

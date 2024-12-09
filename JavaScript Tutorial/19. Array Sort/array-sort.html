@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Sorting Arrays</title>
+  </head>
+  <body>
+    <h2>JavaScript Sorting Arrays</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      // Sorting an Array
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      console.log(fruits.sort());
+
+      // Reversing an Array
+      console.log(fruits.reverse());
+      // By combining sort() and reverse(), you can sort an array in descending order:
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits2.sort();
+      fruits2.reverse();
+      console.log(fruits2);
+
+    //   JavaScript Array toSorted() Method
+    const months = ["Jan", "Feb", "Mar", "Apr"];
+    console.log(months.toSorted());
+
+    // JavaScript Array toReversed() Method
+    console.log(months.toReversed());
+
+    // Numeric Sort
+    // The Compare Function
+    const points = [40, 100, 1, 5, 25, 10];
+    points.sort(function(a, b){return a - b});
+    console.log(points);
+    points.sort(function(a, b){return b - a});
+    console.log(points);
+
+    // Sorting an Array in Random Order
+    points.sort(function(){return 0.5 - Math.random()});
+    console.log(points);
+
+    // The Fisher Yates Method
+    for (let i = points.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i+1));
+        let k = points[i];
+        points[i] = points[j];
+        points[j] = k;
+    }
+    console.log(points);
+
+    // Find the Lowest (or Highest) Array Value
+    // Find Min or Max with sort()
+    points.sort(function(a, b){return a - b});
+    console.log(points);
+    console.log(points[0]);
+    console.log(points[points.length-1]);
+
+    // Using Math.min() on an Array
+
+    function myArrayMin(arr){
+        return Math.min.apply(null, arr)
+    }
+    console.log(myArrayMin(points));
+
+    // Using Math.max() on an Array
+    function myArrayMax(arr){
+        return Math.max.apply(null, arr);
+    }
+    console.log(myArrayMax(points));
+
+    // JavaScript Array Minimum Method
+    function myArrayMinimum(arr){
+        let len = arr.length;
+        let min = Infinity;
+        while(len--){
+            if(arr[len] < min)
+                min = arr[len];
+        }
+        return min;
+    }
+    console.log(myArrayMinimum(points));
+
+    // JavaScript Array Maximum Method
+    console.log(myArrayMaximun(points));
+    function myArrayMaximun(arr){
+        let len = arr.length;
+        let max = -Infinity;
+        while(len--){
+            if(arr[len] > max){
+                max = arr[len];
+            }
+        }
+        return max;
+    }
+
+    // Sorting Object Arrays
+    const cars = [
+        {type:"Volvo", year:2016},
+        {type:"Saab", year:2001},
+        {type:"BMW", year:2010}
+    ];
+    displayCars();
+
+    cars.sort(function(a, b){return a.year - b.year});
+    displayCars();
+
+    function displayCars() {
+    document.getElementById("demo1").innerHTML =
+        cars[0].type + " " + cars[0].year + "<br>" +
+        cars[1].type + " " + cars[1].year + "<br>" +
+        cars[2].type + " " + cars[2].year;
+    }
+
+    // Stable Array sort()
+
+    const myArr = [
+        {name:"X00",price:100 },
+        {name:"X01",price:100 },
+        {name:"X02",price:100 },
+        {name:"X03",price:100 },
+        {name:"X04",price:110 },
+        {name:"X05",price:110 },
+        {name:"X06",price:110 },
+        {name:"X07",price:110 },
+        {name:"X08",price:120 },
+        {name:"X09",price:120 },
+        {name:"X10",price:120 },
+        {name:"X11",price:120 },
+        {name:"X12",price:130 },
+        {name:"X13",price:130 },
+        {name:"X14",price:130 },
+        {name:"X15",price:130 },
+        {name:"X16",price:140 },
+        {name:"X17",price:140 },
+        {name:"X18",price:140 },
+        {name:"X19",price:140 }
+    ];
+
+    myArr.sort( (p1, p2) => {
+    if (p1.price < p2.price) return -1;
+    if (p1.price > p2.price) return 1;
+    return 0;
+    });
+
+    let txt = "";
+    myArr.forEach(myFunction);
+
+    function myFunction(value) {
+    txt += value.name + " " + value.price + "<br>"; 
+    }
+    document.getElementById("demo2").innerHTML = txt;
+    </script>
+  </body>
+</html>

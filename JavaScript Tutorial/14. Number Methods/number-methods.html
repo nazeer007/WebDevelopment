@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Methods</title>
+  </head>
+  <body>
+    <h2>JavaScript Number Methods</h2>
+    <script>
+      // The toString() Method
+      let x1 = 123;
+      console.log(x1.toString());
+      console.log((123).toString());
+      console.log((100 + 20).toString());
+
+      // The toExponential() Method
+      let x2 = 9.656;
+      console.log(x2.toExponential(2));
+      console.log(x2.toExponential(4));
+      console.log(x2.toExponential(6));
+
+      // The toFixed() Method
+      console.log(x2.toFixed(0));
+      console.log(x2.toFixed(2));
+      console.log(x2.toFixed(4));
+      console.log(x2.toFixed(6));
+
+      // The toPrecision() Method
+      console.log(x2.toPrecision());
+      console.log(x2.toPrecision(2));
+      console.log(x2.toPrecision(4));
+      console.log(x2.toPrecision(6));
+
+      // The valueOf() Method
+      console.log(x2.valueOf());
+      console.log((123).valueOf());
+      console.log((100 + 40).valueOf());
+
+      // Converting Variables to Numbers
+      console.log(Number(true));
+      console.log(Number(false));
+      console.log(Number("10"));
+      console.log(Number("  10"));
+      console.log(Number("10  "));
+      console.log(Number(" 10  "));
+      console.log(Number("10.33"));
+      console.log(Number("10,33"));
+      console.log(Number("10 33"));
+      console.log(Number("John"));
+
+      // The Number() Method Used on Dates
+      console.log(Number(new Date("1970-01-01")));
+      //The Date() method returns the number of milliseconds since 1.1.1970.
+      console.log(Number(new Date("1970-01-02")));
+      console.log(Number(new Date("1970-01-02")));
+
+      // The parseInt() Method
+      console.log(parseInt("-10"));
+      console.log(parseInt("-10.33"));
+      console.log(parseInt("10"));
+      console.log(parseInt("10.33"));
+      console.log(parseInt("10 20 30"));
+      console.log(parseInt("10 years"));
+      console.log(parseInt("years 10"));
+
+      // The parseFloat() Method
+      console.log(parseFloat("10"));
+      console.log(parseFloat("10.33"));
+      console.log(parseFloat("10 20 30"));
+      console.log(parseFloat("10 years"));
+      console.log(parseFloat("years 10"));
+
+      // Number Object Methods
+      console.log(Number.isInteger(10));
+      console.log(Number.isInteger(10.5));
+
+      // The Number.isSafeInteger() Method
+      console.log(Number.isSafeInteger(10));
+      console.log(Number.isSafeInteger(12345678901234567890));
+
+      // The Number.parseFloat() Method
+      console.log(Number.parseFloat("10"));
+      console.log(Number.parseFloat("10.33"));
+      console.log(Number.parseFloat("10 20 30"));
+      console.log(Number.parseFloat("10 years"));
+      console.log(Number.parseFloat("years 10"));
+
+      // The Number.parseInt() Method
+     console.log(Number.parseInt("-10"));
+     console.log(Number.parseInt("-10.33"));
+     console.log(Number.parseInt("10"));
+     console.log(Number.parseInt("10.33"));
+     console.log(Number.parseInt("10 20 30"));
+     console.log(Number.parseInt("10 years"));
+     console.log(Number.parseInt("years 10"));
+    </script>
+  </body>
+</html>

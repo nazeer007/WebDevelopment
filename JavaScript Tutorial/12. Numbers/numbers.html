@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    <h2>JavaScript Numbers</h2>
+    <script>
+        let x1 = 3.14; // A number with decimals
+        let y1 = 3; // A number without decimals
+
+        let x2 = 123e5;
+        let y2 = 123e-5;
+        console.log(x2+" "+y2);
+
+        // JavaScript Numbers are Always 64-bit Floating Point
+        // Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+        let x3 = 999999999999999;   // x will be 999999999999999
+        let y3 = 9999999999999999;  // y will be 10000000000000000
+        console.log(x3+" "+y3);
+
+        // The maximum number of decimals is 17.
+        // Floating Precision
+        let x4 = 0.2 + 0.1;
+        console.log(x4);
+
+        let y4 = (0.2 * 10 + 0.1 * 10) / 10;
+        console.log(y4);
+
+        // Adding Numbers and Strings
+        let x5 = 10;
+        let y5 = 20;
+        console.log(x5+y5);
+
+        let x6 = "10";
+        let y6 = "20";
+        console.log(x6+y6);
+
+        let x7 = 10;
+        let y7 = "40";
+        console.log(x7+y7);
+
+        let x8 = 10;
+        let y8 = 30;
+        let z1 = "60";
+        console.log(x8+y8+z1);
+
+        // Numeric Strings
+        let x9 = "100";
+        let y9 = "10";
+        console.log(x9/y9);
+        console.log(x9*y9);
+        console.log(x9-y9);
+        console.log(x9+y9); // This will not work
+
+        // NaN - Not a Number
+        console.log(100/"Apple");
+        console.log(100/"10");
+        console.log(NaN + 5);
+        console.log(NaN + "5");
+        console.log(typeof(NaN));
+
+        // Infinity
+        let myNumber = 2;
+        while(myNumber != Infinity){
+            myNumber *= myNumber;
+        }
+        console.log(myNumber);
+        console.log(2/0);
+        console.log(typeof(Infinity));
+
+        // Hexadecimal
+        console.log(0xFF);
+
+        // JavaScript Numbers as Objects
+        let x10 = 500;
+        let y10 = new Number(500);
+        console.log(x10 == y10);
+        console.log(x10 === y10);
+
+    </script>
+</body>
+</html>

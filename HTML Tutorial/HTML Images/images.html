@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Images</title>
+    <link rel="shortcut icon" href="car.jpg" type="image/x-icon">
+
+    <style>
+      img {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        float: left;
+      }
+      body {
+        background-image: url('/HTML\ Images/space.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <img
+        src="/HTML Images/nature.jpg"
+        alt="View os sun from the top of the mountain"
+        usemap="#naturemap"
+        onclick="myFunction()"
+      />
+      The image will float to the left of the text.
+    </p>
+    <br />
+    <map name="naturemap">
+      <area
+        shape="rect"
+        coords="34, 44, 270, 350"
+        href="https://en.wikipedia.org/wiki/Sun"
+        alt="The Sun"
+      />
+    </map>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+      voluptas.0
+    </p><br>
+
+    <picture>
+      <source media="(min-width: 650px)" srcset="tree.jpg" />
+      <img src="car.jpg" alt="" />
+    </picture>
+
+    <script>
+      function myFunction() {
+        alert('You clicked the Sun!')
+      }
+    </script>
+  </body>
+</html>

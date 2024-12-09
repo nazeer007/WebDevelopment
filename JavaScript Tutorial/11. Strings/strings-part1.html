@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        let carName1 = "Volvo XC60";  // Double quotes
+        let carName2 = 'Volvo XC60';  // Single quotes
+        let answer1 = "It's alright";
+
+        // Template Strings
+        let text = "He's often called 'Johnny'";
+        let length = text.length;
+
+        // Strings as objects
+        let x = "John";
+        let y = new String("John");
+        console.log(x==y); //true
+
+        let a = new String("John");
+        let b = new String("John");
+        console.log(a==b); //false
+
+        // String Methods
+        // JavaScript String charAt()
+        let char = text.charAt(0);
+        console.log(char);
+        // JavaScript String charCodeAt()
+        let char2 = text.charCodeAt(0);
+        console.log(char2);
+        // JavaScript String at()
+        const name = "Nazeer";
+        let letter = name.at(2);
+        console.log(letter); 
+        // Extracting String Parts
+        // JavaScript String slice()
+        let fruits = "Apple, Banana, Kiwi";
+        let part = fruits.slice(7, 13);
+        console.log(part);
+        let part2 = fruits.slice(-1);
+        console.log(part2);
+
+        // JavaScript String substring()
+        let part3 = fruits.substring(7, 13);
+        // let part3 = fruits.substr(7, 13);
+        console.log(part3);
+
+        // Converting to Upper and Lower Case
+        // JavaScript String toUpperCase()
+        let text1 = "Hello World!";
+        let text2 = text1.toUpperCase();
+        console.log(text2);
+
+        // JavaScript String toLowerCase()
+        let text3 = text1.toLowerCase();
+        console.log(text3);
+
+        // JavaScript String concat()
+        let text4 = "Hello";
+        let text5 = "World!";
+        console.log(text4.concat(" ",text5));
+
+        // JavaScript String trim()
+        let text6 = "       Hello World!!!        ";
+        console.log(text6.trim());
+        // JavaScript String trimStart()
+        console.log(text6.trimStart());
+        // JavaScript String trimEnd()
+        console.log(text6.trimEnd());
+
+        // JavaScript String padStart()
+        let num = 5
+        let text7 = num.toString();
+        console.log(text7.padStart(4,"0"));
+        // JavaScript String padEnd()
+        console.log(text7.padEnd(4,"x"));
+
+        // JavaScript String repeat()
+        console.log(text7.repeat(3));
+
+        // Replacing String Content
+        let text8 = "Hello world and world"
+        console.log(text8.replace("World", "Nazeer"));
+        console.log(text8.replace(/HELLO/i,"Hi"));
+        console.log(text8.replace(/world/g,"Earth"));
+
+        // JavaScript String ReplaceAll()
+        console.log(text8.replaceAll("world","Moon"));
+
+        // Converting a String to an Array
+        let text9 = "Apple, Banana, Kiwi, Cherry";
+        const newFruits = (text9.split(","));
+        console.log(newFruits);
+    </script>
+</body>
+</html>
